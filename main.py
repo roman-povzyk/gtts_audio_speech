@@ -9,7 +9,7 @@ if os.path.isfile(filename):
     with open(filename, "r") as file:
         text = file.read()
 else:
-    print(f"file {filename} doesn't exist")
+    print(f"file {filename} doesn't exist. Check again, please.")
 
 # Choosing the language for reading
 lang = None
