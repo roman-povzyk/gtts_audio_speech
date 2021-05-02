@@ -16,7 +16,7 @@ else:
 lang = None
 while (lang != "1") and (lang != "2") and (lang != "3"):
     lang = input("Choose the language (1/2/3 for ua/eng/ru): ")
-    date_start = datetime.datetime.now().second
+    date_start = datetime.datetime.now()
     if lang == "1":
         print("Добре. Конвертую для тебе книгу українською. Це займе трошки часу.")
         obj = gTTS(text, lang="uk")
@@ -33,10 +33,10 @@ while (lang != "1") and (lang != "2") and (lang != "3"):
         print("You must choose one of three languages.")
 
 # Notification of readiness
-date_end = datetime.datetime.now().second
+date_end = datetime.datetime.now()
 if lang == "1":
-    print(f"Готово. Насолоджуйся читанням. {date_end - date_start} сек.")
+    print(f"Готово. Насолоджуйся читанням. {date_end - date_start}")
 elif lang == "2":
-    print(f"Done. Enjoy your reading. {date_end - date_start} sec.")
+    print(f"Done. Enjoy your reading. {date_end - date_start}")
 elif lang == "3":
-    print(f"Есть. Наслаждайся чтением. {date_end - date_start} сек.")
+    print(f"Есть. Наслаждайся чтением. {date_end - date_start}")
